@@ -6,8 +6,6 @@ import 'package:food_media/widgets/CustomTextField.dart';
 class ForgetPassword extends StatelessWidget {
   ForgetPassword({Key? key}) : super(key: key);
 
-  CustomTextField textFieldController = CustomTextField();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,8 +49,11 @@ class ForgetPassword extends StatelessWidget {
                       ),
                       child: Container(
                         height: 60,
-                        child:
-                            textFieldController.textField("Enter Email", false),
+                        child: CustomTextField(
+                          hintText: "Enter Email",
+                          isObscure: false,
+                        ),
+                        // textFieldController.textField("Enter Email", false),
                       ),
                     ),
                     Padding(
