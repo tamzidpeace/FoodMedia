@@ -16,7 +16,7 @@ class ForgetPassword extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.8,
               child: Padding(
                 padding:
-                    const EdgeInsets.only(left: 24.0, top: 40.0, right: 24),
+                    const EdgeInsets.only(left: 24.0, top: 75.0, right: 24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -64,17 +64,24 @@ class ForgetPassword extends StatelessWidget {
                             text: "Remember the password? ",
                             style: TextStyle(color: black2)),
                         TextSpan(
-                            text: "Sign in",
-                            style: TextStyle(color: Colors.blue)),
+                            text: "Sign in", style: TextStyle(color: blue1)),
                       ])),
                     ),
                   ],
                 ),
               ),
             ),
-            Column(
-              children: [CustomButton(label: "Submit", onPressed: () {})],
-            )
+            Container(
+                height: MediaQuery.of(context).size.height * 0.2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 60.0),
+                      child: CustomButton(label: "Submit", onPressed: () {}),
+                    ),
+                  ],
+                ))
           ],
         ),
       ),
