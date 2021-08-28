@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_media/Utils/Strings.dart';
+import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/CustomTextField.dart';
 
 class BottomSheetPopUp {
@@ -21,55 +23,86 @@ class BottomSheetPopUp {
             padding: EdgeInsets.only(
                 bottom: MediaQuery.of(context).viewInsets.bottom), // !important
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                SizedBox(
+                  height: 20,
+                ),
+                Center(
+                  child: Container(
+                    height: 6,
+                    width: MediaQuery.of(context).size.width * .15,
+                    decoration: BoxDecoration(
+                        color: Colors.grey[400],
+                        borderRadius: BorderRadius.circular(5)),
+                  ),
+                ),
                 SizedBox(
                   height: 35,
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Change PIN",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(0xff333333),
-                        fontSize: 20,
-                        fontFamily: "Roboto",
-                        fontWeight: FontWeight.w500,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Expanded(
+                        flex: 4,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20.0),
+                              child: TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  "Create Account",
+                                  style: TextStyle(
+                                      color: Colors.amber[900],
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ),
+                            ),
+                            Divider(
+                              indent: 50,
+                              endIndent: 50,
+                              height: 1,
+                              thickness: 3,
+                              color: Colors.amber[900],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        flex: 4,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Login",
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 20,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(
-                    top: 15,
-                    left: 20,
-                    right: 20,
-                  ),
-                  child: Container(
-                    height: 60,
-                    // child: TextField(
-                    //   //textAlign: TextAlign.center,
-                    //   style: TextStyle(fontSize: 14),
-                    //   textInputAction: TextInputAction.next,
-                    //   maxLength: 4,
-                    //   keyboardType: TextInputType.number,
-                    //   decoration: InputDecoration(
-                    //       labelText: 'Old PIN',
-                    //       counter: SizedBox.shrink(),
-                    //       contentPadding: EdgeInsets.symmetric(
-                    //         vertical: 0,
-                    //       ),
-                    //       hintText: "x x x x",
-                    //       hintStyle: TextStyle(color: Colors.black38)),
-                    // ),
-                    child: textFieldController.textField(),
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: Text(
+                    loginNameText,
+                    style: TextStyle(color: Colors.grey),
                   ),
                 ),
                 Padding(
@@ -80,22 +113,32 @@ class BottomSheetPopUp {
                   ),
                   child: Container(
                     height: 60,
-                    child: textFieldController.textField(),
-                    // child: TextField(
-                    //   //textAlign: TextAlign.center,
-                    //   style: TextStyle(fontSize: 14),
-                    //   textInputAction: TextInputAction.next,
-                    //   maxLength: 4,
-                    //   keyboardType: TextInputType.number,
-                    //   decoration: InputDecoration(
-                    //       labelText: 'New PIN',
-                    //       counter: SizedBox.shrink(),
-                    //       contentPadding: EdgeInsets.symmetric(
-                    //         vertical: 0,
-                    //       ),
-                    //       hintText: "x x x x",
-                    //       hintStyle: TextStyle(color: Colors.black38)),
-                    // ),
+                    child: textFieldController.textField("Enter Name", false),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: Text(
+                    loginEmailText,
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 15,
+                    left: 20,
+                    right: 20,
+                  ),
+                  child: Container(
+                    height: 60,
+                    child: textFieldController.textField("Enter Email", false),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: Text(
+                    loginPasswordText,
+                    style: TextStyle(color: Colors.grey),
                   ),
                 ),
                 Padding(
@@ -104,45 +147,21 @@ class BottomSheetPopUp {
                   child: Container(
                     height: 60,
                     //
-                    child: textFieldController.textField(),
+                    child:
+                        textFieldController.textField("Enter Password", true),
                   ),
                 ),
                 SizedBox(
                   height: 15,
                 ),
-                Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                            onPressed: () {
-                              final String newPin = _newPinController.text;
-                              final String confirmPin =
-                                  _confirmPinController.text;
-                              final String oldPin = _oldPinController.text;
-                            },
-                            child: Container(
-                                height: 45,
-                                width:
-                                    (MediaQuery.of(context).size.width * .6) -
-                                        20,
-                                child: Center(
-                                    child: Text('OK',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          color: Color(0xfff2f2f2),
-                                          fontSize: 16,
-                                          fontFamily: "Roboto",
-                                          fontWeight: FontWeight.w700,
-                                        )))),
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.blue,
-                            )),
-                      ],
-                    )),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CustomButton(label: "Registration", onPressed: () {}),
+                  ],
+                ),
                 SizedBox(
-                  height: 150,
+                  height: 50,
                 )
               ],
             ),
