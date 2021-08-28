@@ -32,6 +32,10 @@ class _WelcomeState extends State<Welcome> {
                     GestureDetector(
                       onTap: () {
                         showModalBottomSheet(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(35),
+                                  topRight: Radius.circular(35))),
                           isScrollControlled: true,
                           context: mainContext,
                           builder: (bottomSheetContext) {
@@ -105,8 +109,7 @@ class _WelcomeState extends State<Welcome> {
                                                           "Create Account",
                                                           style: TextStyle(
                                                               color: isClicked
-                                                                  ? Colors.amber[
-                                                                      900]
+                                                                  ? deepOrange
                                                                   : Colors.grey,
                                                               fontSize: 16,
                                                               fontWeight:
@@ -121,8 +124,7 @@ class _WelcomeState extends State<Welcome> {
                                                         height: 4,
                                                         width: 80,
                                                         decoration: BoxDecoration(
-                                                            color: Colors
-                                                                .amber[900],
+                                                            color: deepOrange,
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
@@ -155,8 +157,7 @@ class _WelcomeState extends State<Welcome> {
                                                           "Login",
                                                           style: TextStyle(
                                                               color: isClicked1
-                                                                  ? Colors.amber[
-                                                                      900]
+                                                                  ? deepOrange
                                                                   : Colors.grey,
                                                               fontSize: 16,
                                                               fontWeight:
@@ -171,8 +172,7 @@ class _WelcomeState extends State<Welcome> {
                                                         height: 4,
                                                         width: 30,
                                                         decoration: BoxDecoration(
-                                                            color: Colors
-                                                                .amber[900],
+                                                            color: deepOrange,
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
@@ -290,8 +290,7 @@ class _WelcomeState extends State<Welcome> {
                                                         style: TextStyle(
                                                             fontWeight:
                                                                 FontWeight.w500,
-                                                            color: Colors
-                                                                .amber[900],
+                                                            color: deepOrange,
                                                             fontSize: 12),
                                                       ))
                                                 ],

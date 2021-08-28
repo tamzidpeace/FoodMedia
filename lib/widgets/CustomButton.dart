@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_media/Utils/Constants.dart';
 
 class CustomButton extends StatelessWidget {
   final String label;
@@ -35,7 +36,7 @@ class CustomButton extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             elevation: 0,
-            primary: Colors.amber[900],
+            primary: deepOrange,
           )),
     );
   }
