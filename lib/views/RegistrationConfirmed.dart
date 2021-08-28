@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/widgets/CustomButton.dart';
-import 'package:food_media/widgets/CustomTextField.dart';
 
 class RegistrationConfirmed extends StatelessWidget {
   const RegistrationConfirmed({Key? key}) : super(key: key);
@@ -27,7 +25,7 @@ class RegistrationConfirmed extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    "Contragulations you have been registered \n successfully",
+                    "Congratulations you have been registered \n successfully",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 14, color: Color(0xff828282)),
                   )
@@ -40,7 +38,7 @@ class RegistrationConfirmed extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 60.0),
+                      padding: const EdgeInsets.only(bottom: 30.0),
                       child: CustomButton(label: "Sign in", onPressed: () {}),
                     ),
                   ],

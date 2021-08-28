@@ -25,7 +25,7 @@ class RequestProcceed extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    "Your request has been processed successfully",
+                    "Your order has been processed successfully",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 14, color: Color(0xff828282)),
                   )

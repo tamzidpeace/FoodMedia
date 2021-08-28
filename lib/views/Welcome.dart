@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/Utils/Strings.dart';
 import 'package:food_media/views/ForgetPassword.dart';
+import 'package:food_media/views/RegistrationConfirmed.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/CustomButton2.dart';
 import 'package:food_media/widgets/CustomTextField.dart';
@@ -45,7 +46,7 @@ class _WelcomeState extends State<Welcome> {
                                           .bottom), // !important
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 20.0),
+                                        horizontal: 14.0),
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -193,7 +194,7 @@ class _WelcomeState extends State<Welcome> {
                                             padding: const EdgeInsets.symmetric(
                                                 horizontal: 30.0),
                                             child: Text(
-                                              loginNameText,
+                                              NameText,
                                               style:
                                                   TextStyle(color: Colors.grey),
                                             ),
@@ -212,6 +213,7 @@ class _WelcomeState extends State<Welcome> {
                                               child: CustomTextField(
                                                 hintText: "Enter Name",
                                                 isObscure: false,
+                                                keyType: "text",
                                               ),
                                             ),
                                           ),
@@ -220,7 +222,7 @@ class _WelcomeState extends State<Welcome> {
                                           padding: const EdgeInsets.symmetric(
                                               horizontal: 30.0),
                                           child: Text(
-                                            loginEmailText,
+                                            EmailText,
                                             style:
                                                 TextStyle(color: Colors.grey),
                                           ),
@@ -236,6 +238,7 @@ class _WelcomeState extends State<Welcome> {
                                             child: CustomTextField(
                                               hintText: "Enter Email",
                                               isObscure: false,
+                                              keyType: "text",
                                             ),
                                           ),
                                         ),
@@ -243,7 +246,7 @@ class _WelcomeState extends State<Welcome> {
                                           padding: const EdgeInsets.symmetric(
                                               horizontal: 30.0),
                                           child: Text(
-                                            loginPasswordText,
+                                            PasswordText,
                                             style:
                                                 TextStyle(color: Colors.grey),
                                           ),
@@ -256,6 +259,7 @@ class _WelcomeState extends State<Welcome> {
                                             child: CustomTextField(
                                               hintText: "Enter Password",
                                               isObscure: true,
+                                              keyType: "number",
                                             ),
                                           ),
                                         ),
@@ -306,7 +310,14 @@ class _WelcomeState extends State<Welcome> {
                                             children: [
                                               CustomButton(
                                                   label: "Registration",
-                                                  onPressed: () {}),
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                RegistrationConfirmed()));
+                                                  }),
                                             ],
                                           ),
                                         ),
