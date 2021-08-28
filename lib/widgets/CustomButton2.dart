@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButton2 extends StatelessWidget {
   final String label;
   final GestureTapCallback onPressed;
 
-  const CustomButton({
+  const CustomButton2({
     Key? key,
     required this.label,
     required this.onPressed,
@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
                 label,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color(0xfff2f2f2),
+                  color: Colors.black,
                   fontSize: 16,
                   fontFamily: "Roboto",
                   fontWeight: FontWeight.w400,
@@ -35,7 +35,7 @@ class CustomButton extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             elevation: 0,
-            primary: Colors.amber[900],
+            primary: Colors.grey[200],
           )),
     );
   }

@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: "Segoe UI"),
       debugShowCheckedModeBanner: false,
-      home: RequestProcceed(),
+      home: Welcome(),
     );
   }
 }
