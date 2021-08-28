@@ -40,42 +40,37 @@ class Welcome extends StatelessWidget {
                 ),
               ),
               Padding(
-                  padding: const EdgeInsets.only(
-                    left: 40.0,
-                    right: 40.0,
-                  ),
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 10.0,
-                        ),
-                        children: [
-                          TextSpan(
-                              text:
-                                  "By logging in or registering, you have agreed to"),
-                          TextSpan(
-                            text: " the Terms and\n",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                          TextSpan(
-                              text: "Conditions ",
-                              style: TextStyle(color: Colors.blue)),
-                          TextSpan(
-                              text: "and ",
-                              style: TextStyle(color: Colors.black)),
-                          TextSpan(
-                              text: " Privacy Policy",
-                              style: TextStyle(color: Colors.blue)),
-                        ]),
-                  )
-                  /* Text(
-                  "By logging in or registering, you have agreed to the Terms and Conditions and Privacy Policy.",
+                padding: const EdgeInsets.only(
+                  left: 40.0,
+                  right: 40.0,
+                ),
+                child: RichText(
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 9.0),
-                ), */
-                  )
+                  text: TextSpan(
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 10.0,
+                      ),
+                      children: [
+                        TextSpan(
+                            text:
+                                "By logging in or registering, you have agreed to"),
+                        TextSpan(
+                          text: " the Terms and\n",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                        TextSpan(
+                            text: "Conditions ",
+                            style: TextStyle(color: Colors.blue)),
+                        TextSpan(
+                            text: "and ",
+                            style: TextStyle(color: Colors.black)),
+                        TextSpan(
+                            text: " Privacy Policy",
+                            style: TextStyle(color: Colors.blue)),
+                      ]),
+                ),
+              ),
             ],
           ),
         ),
