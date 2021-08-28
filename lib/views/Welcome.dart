@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/Utils/Strings.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/CustomTextField.dart';
@@ -26,11 +27,8 @@ class _WelcomeState extends State<Welcome> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ElevatedButton(
-                      onPressed: () async {
-                        // BottomSheetPopUp bottomSheetPopUp = BottomSheetPopUp();
-                        // bottomSheetPopUp.bottomSheet(context);
-
+                    GestureDetector(
+                      onTap: () {
                         showModalBottomSheet(
                           isScrollControlled: true,
                           context: mainContext,
@@ -265,11 +263,14 @@ class _WelcomeState extends State<Welcome> {
                           },
                         );
                       },
-                      child: Text("Bottom Sheet"),
+                      child: Container(
+                          height: 240,
+                          width: 200,
+                          child: Image.asset('assets/images/welcome.png')),
                     ),
                     Text(
                       "Welcome",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 24),
                     ),
                     SizedBox(
                       height: 10,
@@ -277,8 +278,7 @@ class _WelcomeState extends State<Welcome> {
                     Text(
                       "Before enjoying Foodmedia services \n Please Register First",
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: 11.0, height: 1.5, letterSpacing: 0.5),
+                      style: TextStyle(fontSize: 14.0, color: black3),
                     ),
                   ],
                 ),
