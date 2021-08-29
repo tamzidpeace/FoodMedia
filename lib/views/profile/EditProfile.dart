@@ -54,7 +54,6 @@ class EditProfile extends StatelessWidget {
           ),
         ],
       ),
-      
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -102,7 +101,7 @@ class EditProfile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 6.0, right: 24),
+                        padding: const EdgeInsets.only(top: 6.0, right: 10),
                         child: Icon(
                           App.ar,
                           color: blue1,
