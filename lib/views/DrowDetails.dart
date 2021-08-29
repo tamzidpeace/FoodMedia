@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_media/widgets/app_icons.dart';
 
 class DrowDetails extends StatelessWidget {
   const DrowDetails({Key? key}) : super(key: key);
@@ -56,6 +57,24 @@ class DrowDetails extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 50),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(
+                  App.icon__1_,
+                  size: 16,
+                  color: Colors.white,
+                ),
+                Icon(
+                  App.group_8542,
+                  size: 20,
+                  color: Colors.white,
+                ),
+              ],
             ),
           ),
         ],

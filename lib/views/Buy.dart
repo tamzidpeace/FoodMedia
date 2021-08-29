@@ -3,6 +3,7 @@ import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/views/profile/EditProfileTextField.dart';
 import 'package:food_media/views/profile/EditProfileTextField2.dart';
 import 'package:food_media/widgets/CustomButton.dart';
+import 'package:food_media/widgets/app_icons.dart';
 
 class Buy extends StatelessWidget {
   const Buy({Key? key}) : super(key: key);
@@ -11,8 +12,45 @@ class Buy extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buy"),
+        title: Text(
+          "Buy",
+          style: TextStyle(color: black1),
+        ),
         centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: TextButton(
+          style: ButtonStyle(
+            padding: MaterialStateProperty.all(
+              EdgeInsets.only(left: 20),
+            ),
+          ),
+          onPressed: () {
+            //Navigator.pop(context);
+          },
+          child: Row(
+            children: [
+              Icon(
+                App.icon__1_,
+                size: 16,
+                color: black1,
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(
+                App.icon,
+                size: 20,
+                color: black1,
+              ),
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
