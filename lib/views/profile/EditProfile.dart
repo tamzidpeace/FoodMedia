@@ -16,6 +16,51 @@ class EditProfile extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0, bottom: 20),
+              child: Stack(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 100,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                                child: CircleAvatar(
+                                    radius: 35,
+                                    backgroundImage: NetworkImage(
+                                        'https://via.placeholder.com/140x100'))),
+                            Positioned(
+                                top: 65,
+                                left: 30,
+                                child: Icon(
+                                  Icons.edit,
+                                  color: blue1,
+                                  size: 13.44,
+                                ))
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 6.0, right: 24),
+                        child: Icon(
+                          Icons.logout,
+                          color: blue1,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+
             //* begin:: form
             EditProfileTextField(
                 hintText: "Enter Full Name",
@@ -45,7 +90,7 @@ class EditProfile extends StatelessWidget {
             //* end:: form
 
             Padding(
-              padding: const EdgeInsets.only(top: 20.0),
+              padding: const EdgeInsets.only(top: 20.0, bottom: 40.0),
               child: Container(
                   height: 28,
                   width: 88,
