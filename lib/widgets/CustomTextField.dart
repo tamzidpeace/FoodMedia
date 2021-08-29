@@ -26,6 +26,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
       obscureText: widget.isObscure,
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
+        fillColor: Colors.white,
+                filled: true,
         border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(12))),
         counter: SizedBox.shrink(),
