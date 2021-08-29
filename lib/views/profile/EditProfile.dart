@@ -16,6 +16,7 @@ class EditProfile extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            //* profile picture
             Padding(
               padding: const EdgeInsets.only(top: 8.0, bottom: 20),
               child: Stack(
