@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/widgets/CustomCard.dart';
+import 'package:food_media/widgets/CustomTicketCard.dart';
+import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
 class Ticket extends StatefulWidget {
@@ -17,7 +18,7 @@ class _TicketState extends State<Ticket> {
       //backgroundColor: background,
       appBar: NewGradientAppBar(
         title: Text(
-          'Discount',
+          'Ticket',
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -40,7 +41,7 @@ class _TicketState extends State<Ticket> {
           child: Row(
             children: [
               Icon(
-                Icons.arrow_back_ios,
+                App.icon__1_,
                 size: 16,
                 color: Colors.white,
               ),
@@ -50,38 +51,84 @@ class _TicketState extends State<Ticket> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.home),
+            icon: Icon(
+              App.group_8542,
+              size: 20,
+              color: Colors.white,
+            ),
           ),
         ],
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Container(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
-            child: Column(
-              children: [
-                CustomCard(
-                  imageUrl: 'assets/images/FOODTRUCK1.png',
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+                child: Column(
+                  children: [
+                    CustomTicketCard(
+                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      name: "Food Truck Project",
+                      price: "\$130",
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    CustomTicketCard(
+                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      name: 'Tava Restaurant',
+                      price: "\$130",
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    CustomTicketCard(
+                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      name: 'Tava Restaurant',
+                      price: "\$130",
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    CustomTicketCard(
+                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      name: 'Tava Restaurant',
+                      price: "\$130",
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    CustomTicketCard(
+                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      name: 'Tava Restaurant',
+                      price: "\$130",
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    CustomTicketCard(
+                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      name: 'Tava Restaurant',
+                      price: "\$130",
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    CustomTicketCard(
+                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      name: 'Tava Restaurant',
+                      price: "\$130",
+                    ),
+                  ],
                 ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -1.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -3.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle 390.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -1.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -3.png',
-                ),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
