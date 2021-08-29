@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/widgets/app_icons.dart';
 
 class EditProfileTextField extends StatelessWidget {
   final String hintText;
@@ -48,7 +49,13 @@ class EditProfileTextField extends StatelessWidget {
                     EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                 hintText: hintText,
                 hintStyle: TextStyle(color: Colors.grey),
-                suffixIcon: isSuffixIcon ? Icon(Icons.edit) : null),
+                suffixIcon: isSuffixIcon
+                    ? Icon(
+                        App.group_8562,
+                        size: 20,
+                        color: Colors.grey,
+                      )
+                    : null),
           ),
         ],
       ),

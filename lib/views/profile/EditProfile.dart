@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/views/profile/EditProfileTextField.dart';
+import 'package:food_media/widgets/app_icons.dart';
+import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
 class EditProfile extends StatelessWidget {
   const EditProfile({Key? key}) : super(key: key);
@@ -9,10 +11,50 @@ class EditProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Edit Profile"),
+      appBar: NewGradientAppBar(
+        title: Text(
+          'Edit Profile',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
         centerTitle: true,
+        gradient: LinearGradient(
+          colors: [appbarGradient1, appbarGradient2],
+        ),
+        leading: TextButton(
+          style: ButtonStyle(
+            padding: MaterialStateProperty.all(
+              EdgeInsets.only(left: 20),
+            ),
+          ),
+          onPressed: () {
+            //Navigator.pop(context);
+          },
+          child: Row(
+            children: [
+              Icon(
+                App.icon__1_,
+                size: 16,
+                color: Colors.white,
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              App.group_8542,
+              size: 20,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
+      
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -25,21 +67,31 @@ class EditProfile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        height: 100,
+                        height: 110,
                         child: Stack(
                           children: [
                             Positioned(
                                 child: CircleAvatar(
-                                    radius: 35,
+                                    radius: 45,
                                     backgroundImage: NetworkImage(
-                                        'https://via.placeholder.com/140x100'))),
+                                        'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'))),
                             Positioned(
-                                top: 65,
-                                left: 30,
-                                child: Icon(
-                                  Icons.edit,
-                                  color: blue1,
-                                  size: 13.44,
+                                top: MediaQuery.of(context).size.height * .13,
+                                left: MediaQuery.of(context).size.width * .08,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(50),
+                                      color: blue1),
+                                  height: 30,
+                                  width: 30,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 2.0),
+                                    child: Icon(
+                                      App.group_8562,
+                                      color: Colors.white,
+                                      size: 13.44,
+                                    ),
+                                  ),
                                 ))
                           ],
                         ),
@@ -52,7 +104,7 @@ class EditProfile extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 6.0, right: 24),
                         child: Icon(
-                          Icons.logout,
+                          App.ar,
                           color: blue1,
                         ),
                       ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/widgets/CustomButton.dart';
+import 'package:food_media/widgets/app_icons.dart';
 
 class RequestProcceed extends StatelessWidget {
   const RequestProcceed({Key? key}) : super(key: key);
@@ -15,7 +17,11 @@ class RequestProcceed extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("assets/images/success.png"),
+                  Icon(
+                    App.success_icon,
+                    size: 85,
+                    color: deepOrange,
+                  ),
                   Text("Success",
                       textAlign: TextAlign.center,
                       style: TextStyle(
