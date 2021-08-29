@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/views/Welcome.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/app_icons.dart';
 
@@ -17,7 +18,7 @@ class PasswordResetConfirmed extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("assets/images/success.png"),
+                  // Image.asset("assets/images/success.png"),
                   Icon(
                     App.success_icon,
                     size: 85,
@@ -46,7 +47,17 @@ class PasswordResetConfirmed extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(bottom: 30.0),
-                      child: CustomButton(label: "Sign in", onPressed: () {}),
+                      child: CustomButton(
+                          label: "Sign in",
+                          onPressed: () {
+                            Navigator.pop(context);
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Welcome(),
+                              ),
+                            );
+                          }),
                     ),
                   ],
                 ))

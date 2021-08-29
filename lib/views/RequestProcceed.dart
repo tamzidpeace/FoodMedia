@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/widgets/CustomButton.dart';
+import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 import 'package:food_media/widgets/app_icons.dart';
 
 class RequestProcceed extends StatelessWidget {
@@ -45,7 +46,17 @@ class RequestProcceed extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(bottom: 30.0),
-                      child: CustomButton(label: "Done", onPressed: () {}),
+                      child: CustomButton(
+                          label: "Done",
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    CustomBottomNavigationBar(selectedIndex: 2),
+                              ),
+                            );
+                          }),
                     ),
                   ],
                 ))

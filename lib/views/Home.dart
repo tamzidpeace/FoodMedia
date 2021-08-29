@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_media/views/profile/EditProfile.dart';
 import 'package:food_media/widgets/CustomSlider.dart';
 
 class Home extends StatefulWidget {
@@ -28,10 +29,20 @@ class _HomeState extends State<Home> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
-            child: CircleAvatar(
-                radius: 15,
-                backgroundImage:
-                    NetworkImage('https://via.placeholder.com/140x100')),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EditProfile(),
+                  ),
+                );
+              },
+              child: CircleAvatar(
+                  radius: 15,
+                  backgroundImage:
+                      NetworkImage('https://via.placeholder.com/140x100')),
+            ),
           )
         ],
       ),
