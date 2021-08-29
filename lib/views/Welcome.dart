@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/Utils/Strings.dart';
 import 'package:food_media/views/ForgetPassword.dart';
+import 'package:food_media/views/RegistrationConfirmed.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/CustomButton2.dart';
 import 'package:food_media/widgets/CustomTextField.dart';
@@ -31,6 +32,10 @@ class _WelcomeState extends State<Welcome> {
                     GestureDetector(
                       onTap: () {
                         showModalBottomSheet(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(35),
+                                  topRight: Radius.circular(35))),
                           isScrollControlled: true,
                           context: mainContext,
                           builder: (bottomSheetContext) {
@@ -45,7 +50,7 @@ class _WelcomeState extends State<Welcome> {
                                           .bottom), // !important
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 20.0),
+                                        horizontal: 14.0),
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -104,8 +109,7 @@ class _WelcomeState extends State<Welcome> {
                                                           "Create Account",
                                                           style: TextStyle(
                                                               color: isClicked
-                                                                  ? Colors.amber[
-                                                                      900]
+                                                                  ? deepOrange
                                                                   : Colors.grey,
                                                               fontSize: 16,
                                                               fontWeight:
@@ -120,8 +124,7 @@ class _WelcomeState extends State<Welcome> {
                                                         height: 4,
                                                         width: 80,
                                                         decoration: BoxDecoration(
-                                                            color: Colors
-                                                                .amber[900],
+                                                            color: deepOrange,
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
@@ -154,8 +157,7 @@ class _WelcomeState extends State<Welcome> {
                                                           "Login",
                                                           style: TextStyle(
                                                               color: isClicked1
-                                                                  ? Colors.amber[
-                                                                      900]
+                                                                  ? deepOrange
                                                                   : Colors.grey,
                                                               fontSize: 16,
                                                               fontWeight:
@@ -170,8 +172,7 @@ class _WelcomeState extends State<Welcome> {
                                                         height: 4,
                                                         width: 30,
                                                         decoration: BoxDecoration(
-                                                            color: Colors
-                                                                .amber[900],
+                                                            color: deepOrange,
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
@@ -193,7 +194,7 @@ class _WelcomeState extends State<Welcome> {
                                             padding: const EdgeInsets.symmetric(
                                                 horizontal: 30.0),
                                             child: Text(
-                                              loginNameText,
+                                              NameText,
                                               style:
                                                   TextStyle(color: Colors.grey),
                                             ),
@@ -212,6 +213,7 @@ class _WelcomeState extends State<Welcome> {
                                               child: CustomTextField(
                                                 hintText: "Enter Name",
                                                 isObscure: false,
+                                                keyType: "text",
                                               ),
                                             ),
                                           ),
@@ -220,7 +222,7 @@ class _WelcomeState extends State<Welcome> {
                                           padding: const EdgeInsets.symmetric(
                                               horizontal: 30.0),
                                           child: Text(
-                                            loginEmailText,
+                                            EmailText,
                                             style:
                                                 TextStyle(color: Colors.grey),
                                           ),
@@ -236,6 +238,7 @@ class _WelcomeState extends State<Welcome> {
                                             child: CustomTextField(
                                               hintText: "Enter Email",
                                               isObscure: false,
+                                              keyType: "text",
                                             ),
                                           ),
                                         ),
@@ -243,7 +246,7 @@ class _WelcomeState extends State<Welcome> {
                                           padding: const EdgeInsets.symmetric(
                                               horizontal: 30.0),
                                           child: Text(
-                                            loginPasswordText,
+                                            PasswordText,
                                             style:
                                                 TextStyle(color: Colors.grey),
                                           ),
@@ -256,6 +259,7 @@ class _WelcomeState extends State<Welcome> {
                                             child: CustomTextField(
                                               hintText: "Enter Password",
                                               isObscure: true,
+                                              keyType: "number",
                                             ),
                                           ),
                                         ),
@@ -286,8 +290,7 @@ class _WelcomeState extends State<Welcome> {
                                                         style: TextStyle(
                                                             fontWeight:
                                                                 FontWeight.w500,
-                                                            color: Colors
-                                                                .amber[900],
+                                                            color: deepOrange,
                                                             fontSize: 12),
                                                       ))
                                                 ],
@@ -306,7 +309,14 @@ class _WelcomeState extends State<Welcome> {
                                             children: [
                                               CustomButton(
                                                   label: "Registration",
-                                                  onPressed: () {}),
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                RegistrationConfirmed()));
+                                                  }),
                                             ],
                                           ),
                                         ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 
-class RequestProcceed extends StatelessWidget {
-  const RequestProcceed({Key? key}) : super(key: key);
+class PasswordResetConfirmed extends StatelessWidget {
+  const PasswordResetConfirmed({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class RequestProcceed extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    "Your request has been processed successfully",
+                    "Congratulations your Password has\nbeen changed.",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 14, color: Color(0xff828282)),
                   )
@@ -39,7 +39,7 @@ class RequestProcceed extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(bottom: 30.0),
-                      child: CustomButton(label: "Done", onPressed: () {}),
+                      child: CustomButton(label: "Sign in", onPressed: () {}),
                     ),
                   ],
                 ))

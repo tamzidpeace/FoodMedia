@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatefulWidget {
   final String hintText;
   final bool isObscure;
-  CustomTextField({Key? key, required this.hintText, required this.isObscure})
+  final String keyType;
+  CustomTextField(
+      {Key? key,
+      required this.hintText,
+      required this.isObscure,
+      required this.keyType})
       : super(key: key);
 
   @override
@@ -17,14 +22,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
       textAlign: TextAlign.start,
       style: TextStyle(fontSize: 14),
       textInputAction: TextInputAction.next,
-      maxLength: 50,
+      maxLength: widget.keyType == "text" ? 50 : 8,
       obscureText: widget.isObscure,
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
         border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(12))),
         counter: SizedBox.shrink(),
-        contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
         hintText: widget.hintText,
         hintStyle: TextStyle(color: Colors.grey),
       ),
