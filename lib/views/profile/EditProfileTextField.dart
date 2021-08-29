@@ -19,12 +19,12 @@ class EditProfileTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 10.0, bottom: 14),
+            padding: const EdgeInsets.only(left: 10.0, bottom: 5),
             child: Text(
               label,
               style: TextStyle(color: black2),
