@@ -6,12 +6,14 @@ class EditProfileTextField extends StatelessWidget {
   final String inputType;
   final String label;
   final bool isObscure;
+  final bool isSuffixIcon;
   EditProfileTextField(
       {Key? key,
       required this.hintText,
       required this.isObscure,
       required this.label,
-      required this.inputType})
+      required this.inputType,
+      required this.isSuffixIcon})
       : super(key: key);
 
   @override
@@ -46,7 +48,7 @@ class EditProfileTextField extends StatelessWidget {
                     EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                 hintText: hintText,
                 hintStyle: TextStyle(color: Colors.grey),
-                suffixIcon: Icon(Icons.edit)),
+                suffixIcon: isSuffixIcon ? Icon(Icons.edit) : null),
           ),
         ],
       ),
