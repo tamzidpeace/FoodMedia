@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/views/Home.dart';
+import 'package:food_media/views/Welcome.dart';
 import 'package:food_media/views/profile/EditProfileTextField.dart';
 import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
@@ -45,7 +47,14 @@ class EditProfile extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Home(),
+                ),
+              );
+            },
             icon: Icon(
               App.group_8542,
               size: 20,
@@ -75,8 +84,10 @@ class EditProfile extends StatelessWidget {
                                     backgroundImage: NetworkImage(
                                         'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'))),
                             Positioned(
-                                top: MediaQuery.of(context).size.height * .13,
-                                left: MediaQuery.of(context).size.width * .08,
+                                top: 75,
+                                left: 30,
+                                // top: MediaQuery.of(context).size.height * .13,
+                                // left: MediaQuery.of(context).size.width * .08,
                                 child: Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(50),
@@ -102,9 +113,19 @@ class EditProfile extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(top: 6.0, right: 10),
-                        child: Icon(
-                          App.ar,
-                          color: blue1,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Welcome(),
+                              ),
+                            );
+                          },
+                          child: Icon(
+                            App.ar,
+                            color: blue1,
+                          ),
                         ),
                       ),
                     ],
@@ -157,7 +178,14 @@ class EditProfile extends StatelessWidget {
                   height: 28,
                   width: 88,
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Home(),
+                          ),
+                        );
+                      },
                       child: Text("$update"),
                       style: ElevatedButton.styleFrom(
                         primary: deepOrange,

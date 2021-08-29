@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/views/RequestProcceed.dart';
 import 'package:food_media/views/profile/EditProfileTextField.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/app_icons.dart';
@@ -138,7 +139,16 @@ class ContactUs extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 40),
-              child: CustomButton(label: 'Send', onPressed: () {}),
+              child: CustomButton(
+                  label: 'Send',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RequestProcceed(),
+                      ),
+                    );
+                  }),
             )
           ],
         ),

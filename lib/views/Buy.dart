@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/views/OrderSuccessProcceed.dart';
 import 'package:food_media/views/profile/EditProfileTextField.dart';
 import 'package:food_media/views/profile/EditProfileTextField2.dart';
 import 'package:food_media/widgets/CustomButton.dart';
@@ -191,7 +192,16 @@ class Buy extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 40),
-              child: CustomButton(label: 'Submit', onPressed: () {}),
+              child: CustomButton(
+                  label: 'Submit',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => OrderSuccessProcceed(),
+                      ),
+                    );
+                  }),
             )
           ],
         ),

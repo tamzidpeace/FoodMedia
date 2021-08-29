@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/views/Home.dart';
 import 'package:food_media/widgets/CustomDrowCard.dart';
+import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
 class Drows extends StatefulWidget {
@@ -17,7 +19,7 @@ class _DrowsState extends State<Drows> {
       //backgroundColor: background,
       appBar: NewGradientAppBar(
         title: Text(
-          'Drows',
+          'Drow',
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -40,7 +42,7 @@ class _DrowsState extends State<Drows> {
           child: Row(
             children: [
               Icon(
-                Icons.arrow_back_ios,
+                App.icon__1_,
                 size: 16,
                 color: Colors.white,
               ),
@@ -49,8 +51,19 @@ class _DrowsState extends State<Drows> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.home),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Home(),
+                ),
+              );
+            },
+            icon: Icon(
+              App.group_8542,
+              size: 20,
+              color: Colors.white,
+            ),
           ),
         ],
       ),

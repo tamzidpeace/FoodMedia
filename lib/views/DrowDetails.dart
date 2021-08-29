@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_media/views/Home.dart';
 import 'package:food_media/widgets/app_icons.dart';
 
 class DrowDetails extends StatelessWidget {
@@ -69,10 +70,20 @@ class DrowDetails extends StatelessWidget {
                   size: 16,
                   color: Colors.white,
                 ),
-                Icon(
-                  App.group_8542,
-                  size: 20,
-                  color: Colors.white,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Home(),
+                      ),
+                    );
+                  },
+                  child: Icon(
+                    App.group_8542,
+                    size: 20,
+                    color: Colors.white,
+                  ),
                 ),
               ],
             ),

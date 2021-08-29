@@ -31,7 +31,7 @@ class Item extends StatelessWidget {
                 padding:
                     const EdgeInsets.only(left: 20.0, right: 20, bottom: 10),
                 child: Text(
-                  "We are here with the best\ndeserts in town.",
+                  "We are here with the\nbest deserts in town.",
                   style: TextStyle(
                     fontSize: 12.0,
                     fontWeight: FontWeight.w400,
@@ -55,6 +55,9 @@ class Item extends StatelessWidget {
                       ),
                       //textAlign: TextAlign.center,
                     ),
+                    SizedBox(
+                      width: 5,
+                    ),
                     Icon(
                       Icons.arrow_forward_ios,
                       size: 14,
@@ -64,6 +67,12 @@ class Item extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          Image.asset(
+            'assets/images/FOODTRUCK1.png',
+            height: 130,
+            width: 170,
+            fit: BoxFit.fill,
           ),
         ],
       ),

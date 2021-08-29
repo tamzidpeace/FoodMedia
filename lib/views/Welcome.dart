@@ -6,6 +6,7 @@ import 'package:food_media/views/RegistrationConfirmed.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/CustomButton2.dart';
 import 'package:food_media/widgets/CustomTextField.dart';
+import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -338,7 +339,17 @@ class _WelcomeState extends State<Welcome> {
                                             children: [
                                               CustomButton(
                                                 label: "Login",
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          CustomBottomNavigationBar(
+                                                              selectedIndex: 0),
+                                                    ),
+                                                  );
+                                                },
                                               ),
                                             ],
                                           ),
@@ -380,7 +391,17 @@ class _WelcomeState extends State<Welcome> {
                                             children: [
                                               CustomButton2(
                                                 label: "Guest",
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          CustomBottomNavigationBar(
+                                                              selectedIndex: 0),
+                                                    ),
+                                                  );
+                                                },
                                               ),
                                             ],
                                           ),

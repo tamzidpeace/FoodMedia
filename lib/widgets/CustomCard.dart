@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/views/Buy.dart';
 
 class CustomCard extends StatelessWidget {
   // final String label;
@@ -113,7 +114,14 @@ class CustomCard extends StatelessWidget {
                             Container(
                               height: 30,
                               child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Buy(),
+                                      ),
+                                    );
+                                  },
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 20.0),
@@ -127,7 +135,7 @@ class CustomCard extends StatelessWidget {
                                   )),
                             ),
                             SizedBox(
-                              width: 15,
+                              width: 10,
                             ),
                             Text(
                               "40 AED",

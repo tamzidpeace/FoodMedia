@@ -4,6 +4,8 @@ import 'package:food_media/widgets/CustomCard.dart';
 import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
+import 'Home.dart';
+
 class Discount extends StatefulWidget {
   const Discount({Key? key}) : super(key: key);
 
@@ -50,7 +52,14 @@ class _DiscountState extends State<Discount> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Home(),
+                ),
+              );
+            },
             icon: Icon(
               App.group_8542,
               size: 20,
