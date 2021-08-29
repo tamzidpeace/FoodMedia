@@ -33,9 +33,11 @@ class _WelcomeState extends State<Welcome> {
                       onTap: () {
                         showModalBottomSheet(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(35),
-                                  topRight: Radius.circular(35))),
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(35),
+                              topRight: Radius.circular(35),
+                            ),
+                          ),
                           isScrollControlled: true,
                           context: mainContext,
                           builder: (bottomSheetContext) {
@@ -68,9 +70,10 @@ class _WelcomeState extends State<Welcome> {
                                                     .width *
                                                 .15,
                                             decoration: BoxDecoration(
-                                                color: Colors.grey[400],
-                                                borderRadius:
-                                                    BorderRadius.circular(5)),
+                                              color: Colors.grey[400],
+                                              borderRadius:
+                                                  BorderRadius.circular(5),
+                                            ),
                                           ),
                                         ),
                                         SizedBox(
@@ -123,12 +126,13 @@ class _WelcomeState extends State<Welcome> {
                                                       child: Container(
                                                         height: 4,
                                                         width: 80,
-                                                        decoration: BoxDecoration(
-                                                            color: deepOrange,
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        5)),
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: deepOrange,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(5),
+                                                        ),
                                                       ),
                                                     )
                                                   ],
@@ -171,12 +175,13 @@ class _WelcomeState extends State<Welcome> {
                                                       child: Container(
                                                         height: 4,
                                                         width: 30,
-                                                        decoration: BoxDecoration(
-                                                            color: deepOrange,
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        5)),
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: deepOrange,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(5),
+                                                        ),
                                                       ),
                                                     )
                                                   ],
@@ -276,23 +281,25 @@ class _WelcomeState extends State<Welcome> {
                                                     CrossAxisAlignment.end,
                                                 children: [
                                                   GestureDetector(
-                                                      onTap: () {
-                                                        Navigator.pop(context);
-                                                        Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(
-                                                                builder:
-                                                                    (context) =>
-                                                                        ForgetPassword()));
-                                                      },
-                                                      child: Text(
-                                                        "Forget Password?",
-                                                        style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                            color: deepOrange,
-                                                            fontSize: 12),
-                                                      ))
+                                                    onTap: () {
+                                                      Navigator.pop(context);
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              ForgetPassword(),
+                                                        ),
+                                                      );
+                                                    },
+                                                    child: Text(
+                                                      "Forget Password?",
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          color: deepOrange,
+                                                          fontSize: 12),
+                                                    ),
+                                                  )
                                                 ],
                                               ),
                                             ),
@@ -308,15 +315,18 @@ class _WelcomeState extends State<Welcome> {
                                                 MainAxisAlignment.center,
                                             children: [
                                               CustomButton(
-                                                  label: "Registration",
-                                                  onPressed: () {
-                                                    Navigator.pop(context);
-                                                    Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                            builder: (context) =>
-                                                                RegistrationConfirmed()));
-                                                  }),
+                                                label: "Registration",
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          RegistrationConfirmed(),
+                                                    ),
+                                                  );
+                                                },
+                                              ),
                                             ],
                                           ),
                                         ),
@@ -327,8 +337,9 @@ class _WelcomeState extends State<Welcome> {
                                                 MainAxisAlignment.center,
                                             children: [
                                               CustomButton(
-                                                  label: "Login",
-                                                  onPressed: () {}),
+                                                label: "Login",
+                                                onPressed: () {},
+                                              ),
                                             ],
                                           ),
                                         ),
@@ -348,9 +359,10 @@ class _WelcomeState extends State<Welcome> {
                                                       .width *
                                                   .4,
                                               decoration: BoxDecoration(
-                                                  color: Colors.grey[300],
-                                                  borderRadius:
-                                                      BorderRadius.circular(5)),
+                                                color: Colors.grey[300],
+                                                borderRadius:
+                                                    BorderRadius.circular(5),
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -367,8 +379,9 @@ class _WelcomeState extends State<Welcome> {
                                                 MainAxisAlignment.center,
                                             children: [
                                               CustomButton2(
-                                                  label: "Guest",
-                                                  onPressed: () {}),
+                                                label: "Guest",
+                                                onPressed: () {},
+                                              ),
                                             ],
                                           ),
                                         ),
@@ -385,9 +398,10 @@ class _WelcomeState extends State<Welcome> {
                         );
                       },
                       child: Container(
-                          height: 240,
-                          width: 200,
-                          child: Image.asset('assets/images/welcome.png')),
+                        height: 240,
+                        width: 200,
+                        child: Image.asset('assets/images/welcome.png'),
+                      ),
                     ),
                     Text(
                       "Welcome",
@@ -412,35 +426,39 @@ class _WelcomeState extends State<Welcome> {
                   child: RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 10.0,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 10.0,
+                      ),
+                      children: [
+                        TextSpan(
+                            text:
+                                "By logging in or registering, you have agreed to"),
+                        TextSpan(
+                          text: " the Terms and\n",
+                          style: TextStyle(color: Colors.blue),
                         ),
-                        children: [
-                          TextSpan(
-                              text:
-                                  "By logging in or registering, you have agreed to"),
-                          TextSpan(
-                            text: " the Terms and\n",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                          TextSpan(
-                              text: "Conditions ",
-                              style: TextStyle(color: Colors.blue)),
-                          TextSpan(
-                              text: "and ",
-                              style: TextStyle(color: Colors.black)),
-                          TextSpan(
-                              text: " Privacy Policy",
-                              style: TextStyle(color: Colors.blue)),
-                        ]),
+                        TextSpan(
+                          text: "Conditions ",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                        TextSpan(
+                          text: "and ",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        TextSpan(
+                          text: " Privacy Policy",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ],
+                    ),
                   )
                   /* Text(
                   "By logging in or registering, you have agreed to the Terms and Conditions and Privacy Policy.",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 9.0),
                 ), */
-                  )
+                  ),
             ],
           ),
         ),

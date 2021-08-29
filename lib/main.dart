@@ -8,6 +8,7 @@ import 'package:food_media/views/ForgetPassword.dart';
 import 'package:food_media/views/RegistrationConfirmed.dart';
 import 'package:food_media/views/RequestProcceed.dart';
 import 'package:food_media/views/Welcome.dart';
+import 'package:food_media/views/Ticket.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
