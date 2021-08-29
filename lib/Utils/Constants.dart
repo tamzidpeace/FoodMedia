@@ -11,3 +11,6 @@ const Color cBackgroundColor = Color(0xffE5E5E5);
 const Color appbarGradient1 = Color(0xffFF6607);
 const Color appbarGradient2 = Color(0xffFFC1C1);
 const Color background = Color(0xffBEC5D1);
+
+const Color CardItemColor1 = Color(0xffFF9F06);
+const Color CardItemColor2 = Color(0xffFFE1B4);

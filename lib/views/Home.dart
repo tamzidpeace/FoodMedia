@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_media/widgets/CustomSlider.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -35,9 +36,7 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Text("Hello"),
-      ),
+          scrollDirection: Axis.vertical, child: DashSlider()),
     );
   }
 }
