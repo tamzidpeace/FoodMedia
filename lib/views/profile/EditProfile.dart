@@ -54,6 +54,7 @@ class EditProfile extends StatelessWidget {
           ),
         ],
       ),
+      
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/widgets/CustomCard.dart';
+import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
 class Discount extends StatefulWidget {
@@ -40,7 +41,7 @@ class _DiscountState extends State<Discount> {
           child: Row(
             children: [
               Icon(
-                Icons.arrow_back_ios,
+                App.icon__1_,
                 size: 16,
                 color: Colors.white,
               ),
@@ -50,10 +51,15 @@ class _DiscountState extends State<Discount> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.home),
+            icon: Icon(
+              App.group_8542,
+              size: 20,
+              color: Colors.white,
+            ),
           ),
         ],
       ),
+
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
