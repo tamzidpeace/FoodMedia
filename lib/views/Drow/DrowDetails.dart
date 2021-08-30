@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_media/views/Home/Home.dart';
+import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 import 'package:food_media/widgets/app_icons.dart';
 
 class DrowDetails extends StatelessWidget {
@@ -65,17 +65,23 @@ class DrowDetails extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  App.icon__1_,
-                  size: 16,
-                  color: Colors.white,
+                GestureDetector(
+                  child: Icon(
+                    App.icon__1_,
+                    size: 16,
+                    color: Colors.white,
+                  ),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
                 ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Home(),
+                        builder: (context) =>
+                            CustomBottomNavigationBar(selectedIndex: 0),
                       ),
                     );
                   },

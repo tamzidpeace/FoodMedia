@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/views/Cart/Cart.dart';
-import 'package:food_media/views/Discount/Discount.dart';
 import 'package:food_media/views/Drow/Drows.dart';
+import 'package:food_media/views/Home/Home.dart';
 import 'package:food_media/views/Ticket/Ticket.dart';
 import 'package:food_media/views/profile/EditProfile.dart';
 import 'package:food_media/widgets/app_icons.dart';
-
 
 // ignore: must_be_immutable
 class CustomBottomNavigationBar extends StatefulWidget {
@@ -24,7 +23,7 @@ class CustomBottomNavigationBar extends StatefulWidget {
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   final _widgetOptions = [
-    Discount(),
+    Home(),
     Cart(),
     Ticket(),
     EditProfile(),
