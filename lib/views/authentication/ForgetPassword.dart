@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/Utils/Strings.dart';
-import 'package:food_media/views/PasswordResetConfirmed.dart';
+import 'package:food_media/views/authentication/ChangePassword.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/CustomTextField.dart';
 
-class ChangePassword extends StatelessWidget {
-  ChangePassword({Key? key}) : super(key: key);
+class ForgetPassword extends StatelessWidget {
+  ForgetPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class ChangePassword extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Change New Password",
+                      "Forget Password",
                       textAlign: TextAlign.left,
                       style: TextStyle(fontSize: 20.0, color: black1),
                     ),
@@ -32,7 +32,7 @@ class ChangePassword extends StatelessWidget {
                       height: 10.0,
                     ),
                     Text(
-                      "Enter a different password with the previous",
+                      "Enter your registered email below",
                       textAlign: TextAlign.left,
                       style: TextStyle(color: black2, fontSize: 16.0),
                     ),
@@ -42,7 +42,7 @@ class ChangePassword extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0),
                       child: Text(
-                        NewPassword,
+                        EmailText,
                         style: TextStyle(color: Colors.grey),
                       ),
                     ),
@@ -53,45 +53,24 @@ class ChangePassword extends StatelessWidget {
                       child: Container(
                         height: 60,
                         child: CustomTextField(
-                          hintText: "New Password",
-                          isObscure: true,
-                          keyType: "number",
+                          hintText: "Enter Email",
+                          isObscure: false,
+                          keyType: "text",
                         ),
                         // textFieldController.textField("Enter Email", false),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0),
-                      child: Text(
-                        ConfirmPassword,
-                        style: TextStyle(color: Colors.grey),
-                      ),
+                      child: RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: "Remember the password? ",
+                            style: TextStyle(color: black2)),
+                        TextSpan(
+                            text: "Sign in", style: TextStyle(color: blue1)),
+                      ])),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        top: 15,
-                      ),
-                      child: Container(
-                        height: 60,
-                        child: CustomTextField(
-                          hintText: "Confirm Password",
-                          isObscure: true,
-                          keyType: "number",
-                        ),
-                        // textFieldController.textField("Enter Email", false),
-                      ),
-                    ),
-                    // Padding(
-                    //   padding: const EdgeInsets.only(left: 10.0),
-                    //   child: RichText(
-                    //       text: TextSpan(children: [
-                    //     TextSpan(
-                    //         text: "Remember the password? ",
-                    //         style: TextStyle(color: black2)),
-                    //     TextSpan(
-                    //         text: "Sign in", style: TextStyle(color: blue1)),
-                    //   ])),
-                    // ),
                   ],
                 ),
               ),
@@ -104,13 +83,12 @@ class ChangePassword extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 30.0),
                       child: CustomButton(
-                          label: "Reset Password",
+                          label: "Submit",
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        PasswordResetConfirmed()));
+                                    builder: (context) => ChangePassword()));
                           }),
                     ),
                   ],

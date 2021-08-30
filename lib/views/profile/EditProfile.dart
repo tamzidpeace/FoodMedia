@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/views/Home.dart';
-import 'package:food_media/views/Welcome.dart';
+import 'package:food_media/views/Home/Home.dart';
+import 'package:food_media/views/authentication/Welcome.dart';
 import 'package:food_media/views/profile/EditProfileTextField.dart';
 import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';

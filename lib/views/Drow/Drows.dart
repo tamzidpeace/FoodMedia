@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/widgets/CustomCard.dart';
+import 'package:food_media/views/Drow/CustomDrowCard.dart';
+import 'package:food_media/views/Home/Home.dart';
 import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
-import 'Home.dart';
-
-class Discount extends StatefulWidget {
-  const Discount({Key? key}) : super(key: key);
+class Drows extends StatefulWidget {
+  const Drows({Key? key}) : super(key: key);
 
   @override
-  _DiscountState createState() => _DiscountState();
+  _DrowsState createState() => _DrowsState();
 }
 
-class _DiscountState extends State<Discount> {
+class _DrowsState extends State<Drows> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       //backgroundColor: background,
       appBar: NewGradientAppBar(
         title: Text(
-          'Discount',
+          'Drow',
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -68,7 +67,6 @@ class _DiscountState extends State<Discount> {
           ),
         ],
       ),
-
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
@@ -76,23 +74,29 @@ class _DiscountState extends State<Discount> {
             padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
             child: Column(
               children: [
-                CustomCard(
-                  imageUrl: 'assets/images/FOODTRUCK1.png',
+                CustomDrowCard(
+                    imageUrl: 'assets/images/FOODTRUCK1.png',
+                    name: "Food Truck Project"),
+                SizedBox(
+                  height: 10,
                 ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -1.png',
+                CustomDrowCard(
+                    imageUrl: 'assets/images/Rectangle -1.png',
+                    name: "Food Truck Project"),
+                SizedBox(
+                  height: 10,
                 ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -3.png',
+                CustomDrowCard(
+                    imageUrl: 'assets/images/Rectangle -3.png',
+                    name: "Food Truck Project"),
+                SizedBox(
+                  height: 10,
                 ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle 390.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -1.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -3.png',
+                CustomDrowCard(
+                    imageUrl: 'assets/images/Rectangle 390.png',
+                    name: "Food Truck Project"),
+                SizedBox(
+                  height: 10,
                 ),
               ],
             ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/views/Welcome.dart';
+import 'package:food_media/views/Home/Project.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/app_icons.dart';
 
-class PasswordResetConfirmed extends StatelessWidget {
-  const PasswordResetConfirmed({Key? key}) : super(key: key);
+class RequestProcceed extends StatelessWidget {
+  const RequestProcceed({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,6 @@ class PasswordResetConfirmed extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Image.asset("assets/images/success.png"),
                   Icon(
                     App.success_icon,
                     size: 85,
@@ -33,7 +32,7 @@ class PasswordResetConfirmed extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    "Congratulations your Password has\nbeen changed.",
+                    "Your request has been processed successfully",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 14, color: Color(0xff828282)),
                   )
@@ -48,13 +47,12 @@ class PasswordResetConfirmed extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 30.0),
                       child: CustomButton(
-                          label: "Sign in",
+                          label: "Done",
                           onPressed: () {
-                            Navigator.pop(context);
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Welcome(),
+                                builder: (context) => Project(),
                               ),
                             );
                           }),

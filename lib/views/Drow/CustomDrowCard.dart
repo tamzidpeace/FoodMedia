@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/views/DrowDetails.dart';
+import 'package:food_media/views/Drow/DrowDetails.dart';
 
 class CustomDrowCard extends StatelessWidget {
   // final String label;

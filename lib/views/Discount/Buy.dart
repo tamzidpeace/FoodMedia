@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/views/OrderSuccessProcceed.dart';
+import 'package:food_media/views/Discount/OrderSuccessProcceed.dart';
 import 'package:food_media/views/profile/EditProfileTextField.dart';
 import 'package:food_media/views/profile/EditProfileTextField2.dart';
 import 'package:food_media/widgets/CustomButton.dart';

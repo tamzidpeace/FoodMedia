@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/views/Buy.dart';
+import 'package:food_media/views/Discount/Buy.dart';
 
-class CustomCard extends StatelessWidget {
+class CustomCard extends StatefulWidget {
   // final String label;
   // final GestureTapCallback onPressed;
   final String imageUrl;
@@ -15,6 +15,12 @@ class CustomCard extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _CustomCardState createState() => _CustomCardState();
+}
+
+class _CustomCardState extends State<CustomCard> {
+  int count = 1;
+  @override
   Widget build(BuildContext context) {
     return Card(
       child: Container(
@@ -25,7 +31,7 @@ class CustomCard extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
               child: Image.asset(
-                imageUrl,
+                widget.imageUrl,
                 height: 120,
                 width: 120,
                 fit: BoxFit.fill,
@@ -61,7 +67,17 @@ class CustomCard extends StatelessWidget {
                               height: 30,
                               width: 40,
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  if (count == 1) {
+                                    setState(() {
+                                      count = 1;
+                                    });
+                                  } else {
+                                    setState(() {
+                                      count = count - 1;
+                                    });
+                                  }
+                                },
                                 child: Text(
                                   "-",
                                   style: TextStyle(color: Colors.black),
@@ -78,7 +94,7 @@ class CustomCard extends StatelessWidget {
                             SizedBox(
                               width: 10,
                             ),
-                            Text("1"),
+                            Text(count.toString()),
                             SizedBox(
                               width: 10,
                             ),
@@ -86,7 +102,17 @@ class CustomCard extends StatelessWidget {
                               height: 30,
                               width: 40,
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  if (count == 10000) {
+                                    setState(() {
+                                      count = 10000;
+                                    });
+                                  } else {
+                                    setState(() {
+                                      count = count + 1;
+                                    });
+                                  }
+                                },
                                 child: Text(
                                   "+",
                                   style: TextStyle(color: Colors.black),
