@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/widgets/SliderItem.dart';
+import 'package:food_media/views/Home/SliderItem.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class DashSlider extends StatefulWidget {

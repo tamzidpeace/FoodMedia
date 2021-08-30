@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/Utils/Strings.dart';
-import 'package:food_media/views/ForgetPassword.dart';
-import 'package:food_media/views/RegistrationConfirmed.dart';
+import 'package:food_media/views/authentication/ForgetPassword.dart';
+import 'package:food_media/views/authentication/RegistrationConfirmed.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/CustomButton2.dart';
 import 'package:food_media/widgets/CustomTextField.dart';

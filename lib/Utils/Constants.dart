@@ -14,3 +14,14 @@ const Color background = Color(0xffBEC5D1);
 
 const Color CardItemColor1 = Color(0xffFF9F06);
 const Color CardItemColor2 = Color(0xffFFE1B4);
+
+const Color CardItem1Color1 = Color(0xff06B2FF);
+const Color CardItem1Color2 = Color(0xffFFE1B4);
+
+const Color CardItem2Color1 = Color(0xffFF0606);
+const Color CardItem2Color2 = Color(0xffFFE1B4);
+
+const Color CardItem3Color1 = Color(0xff58B6D8);
+const Color CardItem3Color2 = Color(0xffE4E4E4);
+
+const Color blackk = Color(0xff000000);

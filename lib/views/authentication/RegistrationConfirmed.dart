@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/views/authentication/Welcome.dart';
 import 'package:food_media/widgets/CustomButton.dart';
-import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 import 'package:food_media/widgets/app_icons.dart';
 
-class RequestProcceed extends StatelessWidget {
-  const RequestProcceed({Key? key}) : super(key: key);
+class RegistrationConfirmed extends StatelessWidget {
+  const RegistrationConfirmed({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class RequestProcceed extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    "Your request has been processed successfully",
+                    "Congratulations you have been registered \n successfully",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 14, color: Color(0xff828282)),
                   )
@@ -47,13 +47,12 @@ class RequestProcceed extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 30.0),
                       child: CustomButton(
-                          label: "Done",
+                          label: "Sign in",
                           onPressed: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) =>
-                                    CustomBottomNavigationBar(selectedIndex: 2),
+                                builder: (context) => Welcome(),
                               ),
                             );
                           }),

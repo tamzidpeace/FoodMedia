@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/views/RequestProcceed.dart';
+import 'package:food_media/views/Home/RequestProcceed.dart';
 import 'package:food_media/views/profile/EditProfileTextField.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/app_icons.dart';

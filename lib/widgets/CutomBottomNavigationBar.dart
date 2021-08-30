@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/views/Cart.dart';
-import 'package:food_media/views/Discount.dart';
-import 'package:food_media/views/Drows.dart';
-import 'package:food_media/views/Ticket.dart';
+import 'package:food_media/views/Cart/Cart.dart';
+import 'package:food_media/views/Discount/Discount.dart';
+import 'package:food_media/views/Drow/Drows.dart';
+import 'package:food_media/views/Ticket/Ticket.dart';
 import 'package:food_media/views/profile/EditProfile.dart';
 import 'package:food_media/widgets/app_icons.dart';
+
 
 // ignore: must_be_immutable
 class CustomBottomNavigationBar extends StatefulWidget {
@@ -71,35 +72,55 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     color: Color(0xff333333),
                     size: 20,
                   ),
-            label: "hello",
+            label: "Discount",
           ),
           BottomNavigationBarItem(
             icon: widget.selectedIndex == 1
-                ? Icon(
-                    App.mask,
-                    color: deepOrange,
-                    size: 20,
+                ? Padding(
+                    padding: const EdgeInsets.only(right: 50.0),
+                    child: Icon(
+                      App.mask,
+                      color: deepOrange,
+                      size: 20,
+                    ),
                   )
-                : Icon(
-                    App.mask,
-                    color: Color(0xff333333),
-                    size: 20,
+                : Padding(
+                    padding: const EdgeInsets.only(right: 50.0),
+                    child: Icon(
+                      App.mask,
+                      color: Color(0xff333333),
+                      size: 20,
+                    ),
                   ),
-            label: "hello",
+            label: "Cart",
           ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(
+          //     App.star_1,
+          //     color: Colors.white,
+          //     size: 20,
+          //   ),
+          //   label: "hello",
+          // ),
           BottomNavigationBarItem(
             icon: widget.selectedIndex == 2
-                ? Icon(
-                    App.frame,
-                    color: deepOrange,
-                    size: 20,
+                ? Padding(
+                    padding: const EdgeInsets.only(left: 50.0),
+                    child: Icon(
+                      App.frame,
+                      color: deepOrange,
+                      size: 20,
+                    ),
                   )
-                : Icon(
-                    App.frame,
-                    color: Color(0xff333333),
-                    size: 20,
+                : Padding(
+                    padding: const EdgeInsets.only(left: 50.0),
+                    child: Icon(
+                      App.frame,
+                      color: Color(0xff333333),
+                      size: 20,
+                    ),
                   ),
-            label: "hello",
+            label: "Ticket",
           ),
           BottomNavigationBarItem(
             icon: widget.selectedIndex == 3
@@ -112,7 +133,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     radius: 10,
                     backgroundImage:
                         NetworkImage('https://via.placeholder.com/140x100')),
-            label: "hello",
+            label: "Profile",
           ),
         ],
         currentIndex: widget.selectedIndex,

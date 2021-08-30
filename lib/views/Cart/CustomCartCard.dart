@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 
-class CustomCartCard extends StatelessWidget {
+class CustomCartCard extends StatefulWidget {
   // final String label;
   // final GestureTapCallback onPressed;
   final String imageUrl;
@@ -18,6 +18,12 @@ class CustomCartCard extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _CustomCartCardState createState() => _CustomCartCardState();
+}
+
+class _CustomCartCardState extends State<CustomCartCard> {
+  int count = 1;
+  @override
   Widget build(BuildContext context) {
     return Card(
       child: Container(
@@ -28,7 +34,7 @@ class CustomCartCard extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
               child: Image.asset(
-                imageUrl,
+                widget.imageUrl,
                 height: 90,
                 width: 90,
                 fit: BoxFit.fill,
@@ -43,7 +49,7 @@ class CustomCartCard extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0, left: 10),
                       child: Text(
-                        name,
+                        widget.name,
                         style: TextStyle(
                           fontSize: 14,
                           color: black4,
@@ -53,7 +59,7 @@ class CustomCartCard extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 5.0, left: 10),
                       child: Text(
-                        price,
+                        widget.price,
                         style: TextStyle(
                           fontSize: 12,
                           color: blue1,
@@ -76,7 +82,17 @@ class CustomCartCard extends StatelessWidget {
                                 height: 30,
                                 width: 40,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    if (count == 1) {
+                                      setState(() {
+                                        count = 1;
+                                      });
+                                    } else {
+                                      setState(() {
+                                        count--;
+                                      });
+                                    }
+                                  },
                                   child: Text(
                                     "-",
                                     style: TextStyle(color: Colors.black),
@@ -93,7 +109,7 @@ class CustomCartCard extends StatelessWidget {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text("1"),
+                              Text(count.toString()),
                               SizedBox(
                                 width: 10,
                               ),
@@ -101,7 +117,17 @@ class CustomCartCard extends StatelessWidget {
                                 height: 30,
                                 width: 40,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    if (count == 10000) {
+                                      setState(() {
+                                        count = 10000;
+                                      });
+                                    } else {
+                                      setState(() {
+                                        count++;
+                                      });
+                                    }
+                                  },
                                   child: Text(
                                     "+",
                                     style: TextStyle(color: Colors.black),

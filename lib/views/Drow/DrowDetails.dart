@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_media/views/Home.dart';
+import 'package:food_media/views/Home/Home.dart';
 import 'package:food_media/widgets/app_icons.dart';
 
 class DrowDetails extends StatelessWidget {

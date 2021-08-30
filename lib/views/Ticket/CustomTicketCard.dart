@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/views/Project.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class CustomTicketCard extends StatelessWidget {
@@ -23,12 +22,12 @@ class CustomTicketCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => Project(),
-          ),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => Project(),
+        //   ),
+        // );
       },
       child: Card(
         child: Container(

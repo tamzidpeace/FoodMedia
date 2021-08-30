@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
-import 'package:food_media/views/Home.dart';
-import 'package:food_media/widgets/CustomTicketCard.dart';
+import 'package:food_media/views/Home/Home.dart';
+import 'package:food_media/views/Ticket/CustomTicketCard.dart';
 import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
@@ -80,7 +80,7 @@ class _TicketState extends State<Ticket> {
                 child: Column(
                   children: [
                     CustomTicketCard(
-                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      imageUrl: 'assets/images/Rectangle -2 (1).png',
                       name: "Food Truck Project",
                       price: "\$130",
                     ),
@@ -88,7 +88,7 @@ class _TicketState extends State<Ticket> {
                       height: 10,
                     ),
                     CustomTicketCard(
-                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      imageUrl: 'assets/images/Rectangle -2 (1).png',
                       name: 'Tava Restaurant',
                       price: "\$130",
                     ),
@@ -96,7 +96,7 @@ class _TicketState extends State<Ticket> {
                       height: 10,
                     ),
                     CustomTicketCard(
-                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      imageUrl: 'assets/images/Rectangle -2 (1).png',
                       name: 'Tava Restaurant',
                       price: "\$130",
                     ),
@@ -104,7 +104,7 @@ class _TicketState extends State<Ticket> {
                       height: 10,
                     ),
                     CustomTicketCard(
-                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      imageUrl: 'assets/images/Rectangle -2 (1).png',
                       name: 'Tava Restaurant',
                       price: "\$130",
                     ),
@@ -112,7 +112,7 @@ class _TicketState extends State<Ticket> {
                       height: 10,
                     ),
                     CustomTicketCard(
-                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      imageUrl: 'assets/images/Rectangle -2 (1).png',
                       name: 'Tava Restaurant',
                       price: "\$130",
                     ),
@@ -120,7 +120,7 @@ class _TicketState extends State<Ticket> {
                       height: 10,
                     ),
                     CustomTicketCard(
-                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      imageUrl: 'assets/images/Rectangle -2 (1).png',
                       name: 'Tava Restaurant',
                       price: "\$130",
                     ),
@@ -128,7 +128,7 @@ class _TicketState extends State<Ticket> {
                       height: 10,
                     ),
                     CustomTicketCard(
-                      imageUrl: 'assets/images/Rectangle -1 1.png',
+                      imageUrl: 'assets/images/Rectangle -2 (1).png',
                       name: 'Tava Restaurant',
                       price: "\$130",
                     ),
