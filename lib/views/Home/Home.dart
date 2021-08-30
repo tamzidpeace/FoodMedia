@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_media/views/Home/CustomSlider.dart';
 import 'package:food_media/views/Home/HomePageCard.dart';
-import 'package:food_media/views/profile/EditProfile.dart';
 import 'package:food_media/widgets/CustomSliderCard.dart';
+import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 import 'package:food_media/widgets/app_icons.dart';
 
 class Home extends StatefulWidget {
@@ -57,7 +57,9 @@ class _HomeState extends State<Home> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => EditProfile(),
+                    builder: (context) => CustomBottomNavigationBar(
+                      selectedIndex: 3,
+                    ),
                   ),
                 );
               },

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/views/Discount/CustomCard.dart';
+import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
-
-import '../Home/Home.dart';
 
 class Discount extends StatefulWidget {
   const Discount({Key? key}) : super(key: key);
@@ -56,7 +55,8 @@ class _DiscountState extends State<Discount> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Home(),
+                  builder: (context) =>
+                      CustomBottomNavigationBar(selectedIndex: 0),
                 ),
               );
             },
