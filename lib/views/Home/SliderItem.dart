@@ -71,7 +71,7 @@ class Item extends StatelessWidget {
           Image.asset(
             'assets/images/FOODTRUCK1.png',
             height: 130,
-            width: 170,
+            width: 160,
             fit: BoxFit.fill,
           ),
         ],
