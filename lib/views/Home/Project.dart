@@ -4,6 +4,7 @@ import 'package:food_media/Utils/Strings.dart';
 import 'package:food_media/views/Discount/Buy.dart';
 import 'package:food_media/views/Home/ContactUs.dart';
 import 'package:food_media/widgets/CustomSliderCard.dart';
+import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
@@ -55,13 +56,14 @@ class _ProjectState extends State<Project> {
         actions: [
           IconButton(
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => Home(),
-              //   ),
-              // );
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      CustomBottomNavigationBar(selectedIndex: 0),
+                ),
+              );
+              // Navigator.pop(context);
             },
             icon: Icon(
               App.group_8542,

@@ -27,7 +27,7 @@ class Buy extends StatelessWidget {
             ),
           ),
           onPressed: () {
-            //Navigator.pop(context);
+            Navigator.pop(context);
           },
           child: Row(
             children: [
