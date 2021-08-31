@@ -77,76 +77,79 @@ class _TicketState extends State<Ticket> {
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Container(
-          color: Color(0xffF5F6FA),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 10.0, vertical: 10),
-                  child: Column(
-                    children: [
-                      CustomTicketCard(
-                        imageUrl: 'assets/images/Rectangle -2 (1).png',
-                        name: "Food Truck Project",
-                        price: "\$130",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      CustomTicketCard(
-                        imageUrl: 'assets/images/Rectangle -2 (1).png',
-                        name: 'Tava Restaurant',
-                        price: "\$130",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      CustomTicketCard(
-                        imageUrl: 'assets/images/Rectangle -2 (1).png',
-                        name: 'Tava Restaurant',
-                        price: "\$130",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      CustomTicketCard(
-                        imageUrl: 'assets/images/Rectangle -2 (1).png',
-                        name: 'Tava Restaurant',
-                        price: "\$130",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      CustomTicketCard(
-                        imageUrl: 'assets/images/Rectangle -2 (1).png',
-                        name: 'Tava Restaurant',
-                        price: "\$130",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      CustomTicketCard(
-                        imageUrl: 'assets/images/Rectangle -2 (1).png',
-                        name: 'Tava Restaurant',
-                        price: "\$130",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      CustomTicketCard(
-                        imageUrl: 'assets/images/Rectangle -2 (1).png',
-                        name: 'Tava Restaurant',
-                        price: "\$130",
-                      ),
-                    ],
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 20.0),
+          child: Container(
+            color: Color(0xffF5F6FA),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10.0, vertical: 10),
+                    child: Column(
+                      children: [
+                        CustomTicketCard(
+                          imageUrl: 'assets/images/Rectangle -2 (1).png',
+                          name: "Food Truck Project",
+                          price: "\$130",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        CustomTicketCard(
+                          imageUrl: 'assets/images/Rectangle -2 (1).png',
+                          name: 'Tava Restaurant',
+                          price: "\$130",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        CustomTicketCard(
+                          imageUrl: 'assets/images/Rectangle -2 (1).png',
+                          name: 'Tava Restaurant',
+                          price: "\$130",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        CustomTicketCard(
+                          imageUrl: 'assets/images/Rectangle -2 (1).png',
+                          name: 'Tava Restaurant',
+                          price: "\$130",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        CustomTicketCard(
+                          imageUrl: 'assets/images/Rectangle -2 (1).png',
+                          name: 'Tava Restaurant',
+                          price: "\$130",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        CustomTicketCard(
+                          imageUrl: 'assets/images/Rectangle -2 (1).png',
+                          name: 'Tava Restaurant',
+                          price: "\$130",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        CustomTicketCard(
+                          imageUrl: 'assets/images/Rectangle -2 (1).png',
+                          name: 'Tava Restaurant',
+                          price: "\$130",
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

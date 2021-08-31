@@ -78,31 +78,35 @@ class _DiscountState extends State<Discount> {
 
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Container(
-          color: Color(0xffF5F6FA),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
-            child: Column(
-              children: [
-                CustomCard(
-                  imageUrl: 'assets/images/FOODTRUCK1.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -1.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -3.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle 390.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -1.png',
-                ),
-                CustomCard(
-                  imageUrl: 'assets/images/Rectangle -3.png',
-                ),
-              ],
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 20.0),
+          child: Container(
+            color: Color(0xffF5F6FA),
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+              child: Column(
+                children: [
+                  CustomCard(
+                    imageUrl: 'assets/images/FOODTRUCK1.png',
+                  ),
+                  CustomCard(
+                    imageUrl: 'assets/images/Rectangle -1.png',
+                  ),
+                  CustomCard(
+                    imageUrl: 'assets/images/Rectangle -3.png',
+                  ),
+                  CustomCard(
+                    imageUrl: 'assets/images/Rectangle 390.png',
+                  ),
+                  CustomCard(
+                    imageUrl: 'assets/images/Rectangle -1.png',
+                  ),
+                  CustomCard(
+                    imageUrl: 'assets/images/Rectangle -3.png',
+                  ),
+                ],
+              ),
             ),
           ),
         ),

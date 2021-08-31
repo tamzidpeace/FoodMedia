@@ -24,7 +24,7 @@ class _WelcomeState extends State<Welcome> {
   var xContext;
   Future<void> showBottom() async {
     Future.delayed(
-      Duration(seconds: 2),
+      Duration(seconds: 3),
       () {
         showModalBottomSheet(
           enableDrag: false,

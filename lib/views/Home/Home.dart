@@ -64,9 +64,10 @@ class _HomeState extends State<Home> {
                 );
               },
               child: CircleAvatar(
-                  radius: 15,
-                  backgroundImage:
-                      NetworkImage('https://via.placeholder.com/140x100')),
+                radius: 15,
+                backgroundImage: NetworkImage(
+                    'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'),
+              ),
             ),
           )
         ],
