@@ -76,7 +76,7 @@ class _CartState extends State<Cart> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * .55,
+              height: MediaQuery.of(context).size.height * .50,
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 child: Padding(
@@ -105,7 +105,7 @@ class _CartState extends State<Cart> {
               ),
             ),
             Container(
-              //height: MediaQuery.of(context).size.height * .35,
+              //color: Colors.black,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
