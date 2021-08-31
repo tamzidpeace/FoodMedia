@@ -34,6 +34,13 @@ class EditProfile extends StatelessWidget {
           ),
           onPressed: () {
             //Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    CustomBottomNavigationBar(selectedIndex: 0),
+              ),
+            );
           },
           child: Row(
             children: [
