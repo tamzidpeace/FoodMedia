@@ -71,6 +71,7 @@ class _DrowsState extends State<Drows> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
+          color: Color(0xffF5F6FA),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
             child: Column(

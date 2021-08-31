@@ -55,6 +55,7 @@ class _DashSliderState extends State<DashSlider> {
                     child: Card(
                       elevation: 0,
                       child: Container(
+                          width: MediaQuery.of(context).size.width * .76,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                             gradient: LinearGradient(
