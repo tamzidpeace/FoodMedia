@@ -4,7 +4,6 @@ import 'package:food_media/views/Home/RequestProcceed.dart';
 import 'package:food_media/views/profile/EditProfileTextField.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/app_icons.dart';
-import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
 class ContactUs extends StatelessWidget {
   const ContactUs({Key? key}) : super(key: key);
@@ -12,19 +11,14 @@ class ContactUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: NewGradientAppBar(
+      appBar: AppBar(
         title: Text(
-          'Contact Us',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
+          "Contact Us",
+          style: TextStyle(color: black1),
         ),
         centerTitle: true,
-        gradient: LinearGradient(
-          colors: [appbarGradient1, appbarGradient2],
-        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         leading: TextButton(
           style: ButtonStyle(
             padding: MaterialStateProperty.all(
@@ -32,25 +26,28 @@ class ContactUs extends StatelessWidget {
             ),
           ),
           onPressed: () {
-            //Navigator.pop(context);
+            Navigator.pop(context);
           },
           child: Row(
             children: [
               Icon(
                 App.icon__1_,
                 size: 16,
-                color: Colors.white,
+                color: black1,
               ),
             ],
           ),
         ),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              App.group_8542,
-              size: 20,
-              color: Colors.white,
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(
+                App.icon,
+                size: 20,
+                color: black1,
+              ),
             ),
           ),
         ],
