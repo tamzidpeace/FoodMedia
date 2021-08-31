@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/views/Cart/CustomCartCard.dart';
+import 'package:food_media/views/Discount/Buy.dart';
 import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
@@ -39,6 +40,13 @@ class _CartState extends State<Cart> {
           ),
           onPressed: () {
             //Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    CustomBottomNavigationBar(selectedIndex: 0),
+              ),
+            );
           },
           child: Row(
             children: [
@@ -277,7 +285,14 @@ class _CartState extends State<Cart> {
                                             padding: const EdgeInsets.only(
                                                 top: 10.0),
                                             child: ElevatedButton(
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) => Buy(),
+                                                  ),
+                                                );
+                                              },
                                               child: Padding(
                                                 padding:
                                                     const EdgeInsets.symmetric(

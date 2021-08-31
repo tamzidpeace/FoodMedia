@@ -126,12 +126,14 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                 ? CircleAvatar(
                     radius: 10,
                     backgroundColor: deepOrange,
-                    backgroundImage:
-                        NetworkImage('https://via.placeholder.com/140x100'))
+                    backgroundImage: NetworkImage(
+                        'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'),
+                  )
                 : CircleAvatar(
                     radius: 10,
-                    backgroundImage:
-                        NetworkImage('https://via.placeholder.com/140x100')),
+                    backgroundImage: NetworkImage(
+                        'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'),
+                  ),
             label: "Profile",
           ),
         ],
