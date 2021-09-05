@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/views/Cart/Cart.dart';
+import 'package:food_media/views/Discount/Discount.dart';
 import 'package:food_media/views/Drow/Drows.dart';
 import 'package:food_media/views/Home/Home.dart';
 import 'package:food_media/views/Ticket/Ticket.dart';
@@ -23,7 +24,7 @@ class CustomBottomNavigationBar extends StatefulWidget {
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   final _widgetOptions = [
-    Home(),
+    Discount(),
     Cart(),
     Ticket(),
     EditProfile(),

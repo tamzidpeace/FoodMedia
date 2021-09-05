@@ -2,7 +2,7 @@
     package="com.example.food_media">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="food_media"
+        android:label="icons_point"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

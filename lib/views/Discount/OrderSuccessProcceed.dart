@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/views/Home/Home.dart';
 import 'package:food_media/widgets/CustomButton.dart';
 import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 import 'package:food_media/widgets/app_icons.dart';
@@ -53,7 +54,8 @@ class OrderSuccessProcceed extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    CustomBottomNavigationBar(selectedIndex: 0),
+                                   // CustomBottomNavigationBar(selectedIndex: 0),
+                                Home(),
                               ),
                             );
                           }),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
 import 'package:food_media/views/Drow/CustomDrowCard.dart';
+import 'package:food_media/views/Home/Home.dart';
 import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 import 'package:food_media/widgets/app_icons.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
@@ -56,7 +57,8 @@ class _DrowsState extends State<Drows> {
                 context,
                 MaterialPageRoute(
                   builder: (context) =>
-                      CustomBottomNavigationBar(selectedIndex: 0),
+                     // CustomBottomNavigationBar(selectedIndex: 0),
+                  Home(),
                 ),
               );
             },

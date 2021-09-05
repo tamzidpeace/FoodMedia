@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/views/Home/Home.dart';
 import 'package:food_media/views/Ticket/CustomTicketCard.dart';
 import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
 import 'package:food_media/widgets/app_icons.dart';
@@ -42,7 +43,8 @@ class _TicketState extends State<Ticket> {
               context,
               MaterialPageRoute(
                 builder: (context) =>
-                    CustomBottomNavigationBar(selectedIndex: 0),
+                // CustomBottomNavigationBar(selectedIndex: 0),
+                Home(),
               ),
             );
           },
@@ -63,7 +65,8 @@ class _TicketState extends State<Ticket> {
                 context,
                 MaterialPageRoute(
                   builder: (context) =>
-                      CustomBottomNavigationBar(selectedIndex: 0),
+                  // CustomBottomNavigationBar(selectedIndex: 0),
+                  Home(),
                 ),
               );
             },

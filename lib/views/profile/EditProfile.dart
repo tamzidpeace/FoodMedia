@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_media/Utils/Constants.dart';
+import 'package:food_media/views/Home/Home.dart';
 import 'package:food_media/views/authentication/Welcome.dart';
 import 'package:food_media/views/profile/EditProfileTextField.dart';
 import 'package:food_media/widgets/CutomBottomNavigationBar.dart';
@@ -38,7 +39,8 @@ class EditProfile extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) =>
-                    CustomBottomNavigationBar(selectedIndex: 0),
+                // CustomBottomNavigationBar(selectedIndex: 0),
+                Home(),
               ),
             );
           },
@@ -59,7 +61,8 @@ class EditProfile extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) =>
-                      CustomBottomNavigationBar(selectedIndex: 0),
+                  // CustomBottomNavigationBar(selectedIndex: 0),
+                  Home(),
                 ),
               );
             },
@@ -199,7 +202,8 @@ class EditProfile extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    CustomBottomNavigationBar(selectedIndex: 0),
+                                // CustomBottomNavigationBar(selectedIndex: 0),
+                                Home(),
                               ),
                             );
                           },
